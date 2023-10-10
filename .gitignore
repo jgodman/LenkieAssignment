@@ -6,3 +6,6 @@
 /Library.Core/obj
 /Library.IData/obj
 /JsonFileDAO/obj
+/JsonFileDAO/bin/Debug/net5.0
+/Library.Core/bin/Debug/net5.0
+/Library.IData/bin/Debug/net5.0
