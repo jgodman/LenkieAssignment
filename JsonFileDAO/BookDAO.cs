@@ -1,5 +1,7 @@
 ﻿using Library.Core;
 using Library.IData;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,15 +10,18 @@ namespace JsonFileDAO
 {
     public class BookDAO : IBookDAO
     {
-        List<Book> _books = new();
-        Dictionary<int, Book> _booksDict = new();
-
+        static List<Book> _books = new();
+        static Dictionary<int, Book> _booksDict = new();
+        readonly string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @".\StaticData\Books.json");
         public BookDAO()
         {
-            string staticData = File.ReadAllText("/StaticData/Books.json");
-            _books = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Book>>(staticData);
-            _booksDict = _books.ToDictionary(b => b.ID);
-        }
+            if (_books.Count == 0)
+            {
+                string staticData = File.ReadAllText(filePath);
+                _books = JsonConvert.DeserializeObject<List<Book>>(staticData);
+                _booksDict = _books.ToDictionary(b => b.ID);
+            }
+        } 
 
         public bool Borrow(int bookID)
         {
@@ -48,7 +53,7 @@ namespace JsonFileDAO
         /// <exception cref="System.NotImplementedException"></exception>
         public int Insert(Book entity)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public bool Reserve(int bookID)
@@ -66,6 +71,7 @@ namespace JsonFileDAO
                 }
                 bookSearched.Status = isBorrow ? BookStatus.Borrowed : BookStatus.Reserved;
                 _booksDict[bookID] = bookSearched;
+                Update(bookSearched);
                 return true;
             }
             else
@@ -88,9 +94,22 @@ namespace JsonFileDAO
             return query.ToList();
         }
 
+        private void Commit()
+        {
+            try
+            {
+                File.WriteAllText(filePath, JsonConvert.SerializeObject(_books));
+            }
+            catch(Exception)
+            {
+
+            }
+        }
+
         public Book Update(Book entity)
         {
-            throw new System.NotImplementedException();
+            Commit();
+            return entity;
         }
     }
 }

@@ -1,0 +1,101 @@
+[
+    {
+        "ID": "1",
+        "Author": "Chinua Achebe",
+        "language": "English",
+        "PageCount": 209,
+        "Title": "Things Fall Apart",
+        "Year": 1958,
+        "Status ": 0
+    },
+    {
+        "ID": "2",
+        "Author": "Hans Christian Andersen",
+        "language": "Danish",
+        "PageCount": 784,
+        "Title": "Fairy tales",
+        "Year": 1836,
+        "Status ": 0
+    },
+    {
+        "ID": "3",
+        "Author": "Dante Alighieri",
+        "language": "Italian",
+        "PageCount": 928,
+        "Title": "The Divine Comedy",
+        "Year": 1315,
+        "Status ": 1
+    },
+    {
+        "ID": "8",
+        "Author": "Jane Austen",
+        "language": "English",
+        "PageCount": 226,
+        "Title": "Pride and Prejudice",
+        "Year": 1813,
+        "Status ": 0
+    },
+    {
+        "ID": "9",
+        "Author": "Honoré de Balzac",
+        "language": "French",
+        "PageCount": 443,
+        "Title": "Le Père Goriot",
+        "Year": 1835,
+        "Status ": 1
+    },
+    {
+        "ID": "10",
+        "Author": "Samuel Beckett",
+        "language": "French, English",
+        "PageCount": 256,
+        "Title": "Molloy, Malone Dies, The Unnamable, the trilogy",
+        "Year": 1952,
+        "Status ": 0
+    },
+    {
+        "ID": "11",
+        "Author": "Giovanni Boccaccio",
+        "language": "Italian",
+        "PageCount": 1024,
+        "Title": "The Decameron",
+        "Year": 1351,
+        "Status ": 1
+    },
+    {
+        "ID": "12",
+        "Author": "Jorge Luis Borges",
+        "language": "Spanish",
+        "PageCount": 224,
+        "Title": "Ficciones",
+        "Year": 1965,
+        "Status ": 0
+    },
+    {
+        "ID": "13",
+        "Author": "Emily Brontë",
+        "language": "English",
+        "PageCount": 342,
+        "Title": "Wuthering Heights",
+        "Year": 1847,
+        "Status ": 2
+    },
+    {
+        "ID": "14",
+        "Author": "Albert Camus",
+        "language": "French",
+        "PageCount": 185,
+        "Title": "The Stranger",
+        "Year": 1942,
+        "Status ": 2
+    },
+    {
+        "ID": "15",
+        "Author": "Paul Celan",
+        "language": "German",
+        "PageCount": 320,
+        "Title": "Poems",
+        "Year": 1952,
+        "Status ": 1
+    }
+]

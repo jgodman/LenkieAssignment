@@ -9,3 +9,8 @@
 /JsonFileDAO/bin/Debug/net5.0
 /Library.Core/bin/Debug/net5.0
 /Library.IData/bin/Debug/net5.0
+/Library.WebAPI/bin/Debug/net6.0
+/Library.WebAPI/obj
+/JsonFileDAO/bin/Debug/net6.0
+/Library.Core/bin/Debug/net6.0
+/Library.IData/bin/Debug/net6.0
