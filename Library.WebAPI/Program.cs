@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddTransient<IBookDAO, BookDAO>();
-/*builder.Services.AddAuthentication("Bearer")
+builder.Services.AddAuthentication("Bearer")
     .AddIdentityServerAuthentication("Bearer", options =>
     {
         options.ApiName = "webAPIClient";
@@ -20,7 +20,7 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser();
         policy.RequireClaim("scope", "read");
     });
-});*/
+});
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -42,10 +42,10 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-/*app.UseEndpoints(endpoints =>
+app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers().RequireAuthorization("libraryApiScope"); ;
-});*/
+});
 
 app.MapControllers();
 

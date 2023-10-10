@@ -11,7 +11,7 @@ namespace Library.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class BookController : ControllerBase
     {
         private IBookDAO _bookDAO;
