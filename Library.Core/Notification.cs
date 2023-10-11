@@ -5,10 +5,10 @@ namespace Library.Core
 {
     public class Notification
     {
-        public int ID { get; set; }
         public int BookID { get; set; }
         public virtual Book Book { get; set; }
-        public DateTime DateAvailable { get; set; }
-        public List<int> RecipientCustomers { get; set; }
+        public DateTime RequestDate { get; set; }
+        public int Recipient { get; set; }
+        public DateTime TimeBookBecameAvailable { get; set; }
     }
 }

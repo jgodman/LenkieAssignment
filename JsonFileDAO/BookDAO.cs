@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace JsonFileDAO
 {
@@ -94,11 +95,17 @@ namespace JsonFileDAO
             return query.ToList();
         }
 
+        /// <summary>
+        /// This saves all the data in a flat file, asynchronously.
+        /// </summary>
         private void Commit()
         {
             try
             {
-                File.WriteAllText(filePath, JsonConvert.SerializeObject(_books));
+                Task.Run(() =>
+                {
+                    File.WriteAllText(filePath, JsonConvert.SerializeObject(_books));
+                });
             }
             catch(Exception)
             {

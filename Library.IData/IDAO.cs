@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Library.IData
+﻿namespace Library.IData
 {
     public interface IDAO<T> : IBaseDAO<T> where T : class
     {

@@ -1,5 +1,4 @@
-﻿using JsonFileDAO;
-using Library.Core;
+﻿using Library.Core;
 using Library.IData;
 using Library.WebAPI.Model;
 using Microsoft.AspNetCore.Authorization;
@@ -14,9 +13,11 @@ namespace Library.WebAPI.Controllers
     [Authorize]
     public class BookController : ControllerBase
     {
-        private IBookDAO _bookDAO;
-        public BookController(IBookDAO bookDAO) {
+        private readonly IBookDAO _bookDAO;
+        private readonly INotificationDAO _notificationDAO;
+        public BookController(IBookDAO bookDAO, INotificationDAO notificationDAO) {
             _bookDAO = bookDAO;
+            _notificationDAO = notificationDAO;
         }
 
         // GET: api/<BookController>
@@ -72,6 +73,7 @@ namespace Library.WebAPI.Controllers
         public BaseResponse Reserve(int bookID)
         {
             var isSuccessful = _bookDAO.Borrow(bookID);
+
             return new BaseResponse
             {
                 IsSuccessful = isSuccessful,
