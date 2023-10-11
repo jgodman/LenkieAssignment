@@ -2,6 +2,9 @@
 
 namespace Library.Core
 {
+    /// <summary>
+    /// This is the entity representing the books.
+    /// </summary>
     public class Book
     {
         /// <summary>
@@ -19,6 +22,10 @@ namespace Library.Core
         public BookStatus Status { get; set; }
     }
 
+    /// <summary>
+    /// There are statuses:
+    /// 0 - Available, 1 - Reserved, 2 - Borrowed
+    /// </summary>
     public enum BookStatus
     {
         Available,
