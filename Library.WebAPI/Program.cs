@@ -20,6 +20,12 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser();
         policy.RequireClaim("scope", "read");
     });
+
+    options.AddPolicy("libraryAdminApiScope", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireClaim("scope", "admin");
+    });
 });
 
 
@@ -44,7 +50,7 @@ app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllers().RequireAuthorization("libraryApiScope"); ;
+    endpoints.MapControllers().RequireAuthorization("libraryApiScope", "libraryAdminApiScope");
 });
 
 app.MapControllers();
