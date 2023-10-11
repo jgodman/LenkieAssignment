@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Core", "Library.Core\Library.Core.csproj", "{1CD199A9-1CA4-48F4-9BF0-11EE918BFF0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonFileDAO", "JsonFileDAO\JsonFileDAO.csproj", "{D1E3E723-6E83-42B1-B84C-53513AEB8BC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.JsonFileDAO", "Library.JsonFileDAO\Library.JsonFileDAO.csproj", "{D1E3E723-6E83-42B1-B84C-53513AEB8BC5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.IData", "Library.IData\Library.IData.csproj", "{C99446DB-CCF1-4647-90B2-37AAACC90B0B}"
 EndProject

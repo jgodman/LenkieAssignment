@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using Library.IData;
 using System.Threading.Tasks;
 
-namespace JsonFileDAO
+namespace Library.JsonFileDAO
 {
     public class NotificationDAO : INotificationDAO
     {
