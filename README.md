@@ -15,9 +15,8 @@ The other 2 are .NET web applications/project in the solution:
 - IDServer4
 - Library.WebAPI
 
+## Deployment/Running it.
 In order to run it, you'd need to open the solution in Visual Studio (v 17, prefarably) and configure multiple startups in this order:
 1. IDServer4
 2. Library.WebAPI
-
-
 
